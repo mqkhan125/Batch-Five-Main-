@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Animation</title>
+    <!-- 
+        ease - Specifies an animation with a slow start, then fast, then end slowly (this is default)
+        ease-in - Specifies an animation with a slow start
+        ease-out - Specifies an animation with a slow end
+        ease-in-out - Specifies an animation with a slow start and end
+        linear - Specifies an animation with the same speed from start to end
+        cubic-bezier(n,n,n,n) - Lets you define your own values in a cubic-bezier function
+
+
+
+        https://www.w3schools.com/css/css3_animations.asp
+     -->
+    <style>
+      .parent {
+        background-color: blue;
+        height: 600px;
+        width: 600px;
+      }
+      .child {
+        background-color: red;
+        width: 50%;
+        height: 50%;
+
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        /* iteration-count kitni bar chalani hai animation */
+        /* animation: left-to-right linear forwards 3 1s; */
+        animation: left-to-right linear alternate infinite 1s;
+        /* animation: left-to-right linear alternate 3 1s; */
+        /* animation: left-to-right linear alternate 3 1s; */
+
+        /* left se 100px top se 200px */
+        /* transform: translate(100px, 200px); */
+      }
+
+      @keyframes left-to-right {
+        0% {
+          transform: translate(0px);
+          opacity: 0;
+        }
+        40% {
+          transform: translate(40%);
+          opacity: 0.4;
+        }
+        80% {
+          transform: translate(80%);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translate(100%);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

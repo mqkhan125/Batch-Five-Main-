@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --black: black;
+  --white: white;
+  --yellow: #f6d200;
+  --body-color: #ededed;
+}
+
+/* 1rem = 16px because html font size is 16px by default */
+
+body {
+  background-color: var(--body-color);
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  height: 300px;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center; /* horizantal center */
+  align-items: center; /* vertical center */
+  text-align: center;
+}
+
+header h1 {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 400;
+}
+header p {
+  color: var(--yellow);
+  font-style: italic;
+}
+
+nav {
+  background-color: var(--yellow);
+  display: flex;
+  padding: 0.75rem 0px;
+}
+.nav-item {
+  flex-grow: 1;
+  text-align: center;
+}
+
+#main-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem;
+}
+#main-section main {
+  flex-basis: 78%;
+}
+#main-section aside {
+  flex-basis: 20%;
+}
+.featured-item {
+  background-color: var(--white);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+.featured-item h3 {
+  font-size: 1.063rem;
+  margin-bottom: 1.25rem;
+}
+
+.featured-item h4 {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  margin-left: 1.125rem;
+}
+
+#movie-colletions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.movie-items {
+  margin-bottom: 20px;
+}
+.movie-items img {
+  max-width: 100%;
+  /* height: 500px; */
+  /* object-fit: cover; */
+}
+
+.movie-half-width {
+  flex-basis: 49%;
+}
+
+.movie-third {
+  flex-basis: 32%;
+}
+
+.movie-full {
+  /* flex-grow: 1; */
+  flex-basis: 100%;
+}
+
+.movie-title {
+  background-color: var(--yellow);
+  text-align: center;
+  padding: 1rem 0px;
+  margin-top: -4px;
+}
+
+.movie-title p {
+  font-weight: 600;
+}
+
+.movie-description {
+  background-color: var(--white);
+  padding: 2rem;
+}
+.movie-full img {
+  width: 100%;
+}
+
+.use-full-heading {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sport-movies {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.sport-movie-section-one {
+  flex-basis: 60%;
+}
+.sport-movie-section-one img {
+  height: 100%;
+}
+.sport-movie-section-two {
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+}
+.sport-movie-section-two h2 {
+  margin-bottom: 1rem;
+}
+
+.sport-movie-section-two p {
+  margin-bottom: 1rem;
+}
+
+.sport-movie-section-two a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+#second-sport-movie {
+  flex-direction: row-reverse;
+}
+#download-container {
+  margin-bottom: 2rem;
+}
+#download-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -4px;
+}
+#download-body img {
+  width: 60px;
+}
+#download-body-first {
+  background-color: var(--black);
+  color: var(--white);
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#download-body-first i {
+  font-size: 2.5rem;
+}
+#download-body-second {
+  background-color: var(--white);
+  flex-grow: 3;
+  padding: 0.8rem;
+}
+#download-body-third {
+  background-color: var(--yellow);
+  flex-grow: 1;
+}
+#genre-section {
+  display: flex;
+}
+#genre-section div:nth-child(2) {
+  margin-left: 4rem;
+}
+#cast-section {
+  display: flex;
+  align-items: center;
+  margin-top: 0.7rem;
+}
+
+#cast-images {
+  margin-left: 4rem;
+}
+
+#cast-images img {
+  border-radius: 50%;
+}
+
+#download-body-third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#download-body-third h3 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+#gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#gallery-section img {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+}
+
+.gallery-items {
+  flex-grow: 1;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+/* charoon me se phla element */
+.gallery-items:nth-child(4n + 1) {
+  flex-basis: 260px;
+}
+
+.gallery-items:nth-child(4n + 2) {
+  flex-basis: 325px;
+}
+
+.gallery-items:nth-child(4n + 3) {
+  flex-basis: 180px;
+}
+
+.gallery-items:nth-child(4n + 4) {
+  flex-basis: 380px;
+}
+
+footer {
+  background-color: var(--black);
+  padding: 1rem 0px;
+  text-align: center;
+  color: var(--white);
+}
+
+/*
+https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
+  31.25rem — 480px: Mobile devices
+  481px — 768px: iPads, Tablets
+  769px — 1024px: Small screens, laptops
+  1025px — 1200px: Desktops, large screens
+  1201px and more —  Extra large screens, TV
+*/
+
+/* Desktops, large screens */
+@media (max-width: 1200px) {
+}
+/* Small screens, laptops */
+@media (max-width: 1024px) {
+  #main-section {
+    flex-direction: column;
+  }
+}
+/* iPads, Tablets */
+@media (max-width: 768px) {
+  .sport-movies {
+    flex-direction: column;
+  }
+  #second-sport-movie {
+    flex-direction: column-reverse;
+  }
+  #second-sport-movie img {
+    margin-top: 2rem;
+  }
+  .sport-movie-section-one {
+    text-align: center;
+  }
+  .sport-movie-section-one img {
+    width: 60%;
+  }
+  .sport-movie-section-two {
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  #movie-colletions {
+    flex-direction: column;
+  }
+  #download-body {
+    flex-direction: column;
+  }
+  #download-body-first {
+    padding: 2rem;
+  }
+  #download-body-second {
+    padding: 2rem;
+  }
+  #download-body-third {
+    padding: 2rem;
+  }
+}
+/* Mobile devices */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+  }
+  .nav-item {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

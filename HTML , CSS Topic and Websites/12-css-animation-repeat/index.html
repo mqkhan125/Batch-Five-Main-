@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Animation</title>
+    <style>
+      .parent {
+        background-color: blue;
+        height: 600px;
+        width: 600px;
+      }
+      .child {
+        background-color: red;
+        width: 50%;
+        height: 50%;
+        /* x axis itna pixel */
+        /* y axis itna pixel */
+        /* transform: translate(200px, 200px); */
+        /* transition: margin 2s; */
+        transition: transform 1s;
+        /* margin left apply hogi 2 second bad matlab aram aram se */
+      }
+
+      .parent:hover .child {
+        /* background-color: green; */
+        /* margin-left: 100px; */
+
+        transform: translate(100px);
+        /* transform: translate(100px); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
